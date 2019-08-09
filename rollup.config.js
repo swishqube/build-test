@@ -46,7 +46,7 @@ let exportConfig = [{
     format: 'umd',
     name: 'TestComp',
     globals,
-    banner: 'strBanner',
+    banner: strBanner,
   },
   external,
   plugins
