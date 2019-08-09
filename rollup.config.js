@@ -24,7 +24,7 @@ const plugins = [
     output: (styles, styleNodes) => {
       console.log('writing styles...');
       mkdirSync('./build/css', {recursive:true});
-      writeFileSync('build/css/test.css', [strBanner, styles].join(''));
+      writeFileSync('build/css/test.css', ['banner', styles].join(''));
       console.log('done writing styles...');
     },
     failOnError: true
