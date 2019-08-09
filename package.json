@@ -1,0 +1,77 @@
+{
+  "name": "test-comp",
+  "version": "0.0.1",
+  "description": "Testing build",
+  "main": "src/index.js",
+  "startYear": "2019",
+  "scripts": {
+    "test": "jest",
+    "clean": "rm -rf build/*",
+    "build:all": "npm run clean && npm run build && npm run dist",
+    "build": "rollup --environment BUNDLE:false --config ./rollup.config.js --sourcemap",
+    "dist": "rollup --environment BUNDLE:true --environment PROD:true --config ./rollup.config.js"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "",
+      "js",
+      "json"
+    ],
+    "modulePaths": [
+      "./"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(s?css|less)$": "jest/styleMock.js",
+      "^.+\\.(gif|ttf|eot|svg)$": "jest/fileMock.js"
+    },
+    "setupFiles": [
+      "./setupJest.js"
+    ]
+  },
+  "keywords": [
+    "range",
+    "slider",
+    "datetime",
+    "timeline",
+    "selection",
+    "time"
+  ],
+  "author": "Swish Qube Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swishqube/swishqube-daterange-slider/issues"
+  },
+  "homepage": "https://github.com/swishqube/swishqube-daterange-slider#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.1.0",
+    "docdash": "^1.1.1",
+    "gulp": "^4.0.2",
+    "gulp-jsdoc3": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
+    "jsdoc": "^3.6.3",
+    "mini-css-extract-plugin": "^0.8.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-babel-minify": "^9.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-scss": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.0",
+    "rollup": "^1.17.0"
+  }
+}
