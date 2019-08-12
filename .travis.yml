@@ -10,6 +10,7 @@ before_script:
   - npm install
   - npm update -g npm
   - npm run build
+  - npm run coveralls
 branches:
   only:
     - master
