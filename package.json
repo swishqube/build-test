@@ -6,6 +6,8 @@
   "startYear": "2019",
   "scripts": {
     "test": "jest",
+    "coverage": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "clean": "rm -rf build/*",
     "build:all": "npm run clean && npm run build && npm run dist",
     "build": "rollup --environment BUNDLE:false --config ./rollup.config.js --sourcemap",
@@ -50,6 +52,7 @@
     "@babel/preset-env": "^7.5.5",
     "babel-jest": "^24.8.0",
     "clean-webpack-plugin": "^3.0.0",
+    "coveralls": "^3.0.6",
     "css-loader": "^3.1.0",
     "docdash": "^1.1.1",
     "gulp": "^4.0.2",
