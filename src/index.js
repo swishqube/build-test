@@ -3,6 +3,8 @@ class TestComp {
         this.el = el;
         this.options = options;
         this.render();
+        this.render();
+        this.render();
     }
 
 
